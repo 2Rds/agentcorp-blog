@@ -2,9 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AgentCorp Blog | Autonomy is the easy part",
+  metadataBase: new URL("https://blog.agentcorp.work"),
+  title: {
+    default: "AgentCorp Blog",
+    template: "%s | AgentCorp Blog",
+  },
   description:
-    "AgentCorp blog post 01, prepared as the Blog tab companion for agentcorp.work.",
+    "Field notes on building an AI workforce operators can trust with the work that actually matters.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "AgentCorp Blog",
+    title: "AgentCorp Blog",
+    description: "Ideas for operating the agentic company.",
+    url: "/",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
